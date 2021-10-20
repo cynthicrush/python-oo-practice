@@ -20,3 +20,16 @@ class SerialGenerator:
     100
     """
 
+    def __init__(self, start):
+        """create a start number"""
+        self.start = self.sequential = start
+
+    def generate(self):
+        """generate the sequential number"""
+        self.sequential += 1
+        return self.sequential - 1
+
+    def reset(self):
+        """reset the number to the original start number"""
+        self.sequential = self.start
+
